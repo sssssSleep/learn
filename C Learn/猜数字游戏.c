@@ -12,24 +12,24 @@ void game()
 	while (1)
 	{
 		system("cls");
-		printf("Çë²ÂÊı×Ö:> ");
+		printf("è¯·çŒœæ•°å­—:> ");
 		scanf("%d", &guess);
 		if (guess>ret)
 		{
 			system("cls");
-			printf("²Â´óÁË\n");
+			printf("çŒœå¤§äº†\n");
 			Sleep(1000);
 		}
 		else if (guess < ret)
 		{
 			system("cls");
-			printf("²ÂĞ¡ÁË\n");
+			printf("çŒœå°äº†\n");
 			Sleep(1000);
 		}
 		else
 		{
 			system("cls");
-			printf("¹§Ï²Äã,²Â¶ÔÁË\n");
+			printf("æ­å–œä½ ,çŒœå¯¹äº†\n");
 			Sleep(1000);
 			break;
 		}
@@ -43,7 +43,7 @@ void menu()
 	printf("###############################\n");
 	printf("######  1.play  2.exit  #######\n");
 	printf("###############################\n");
-	printf("ÇëÊäÈë:> ");
+	printf("è¯·è¾“å…¥:> ");
 }
 int main()
 {
@@ -62,10 +62,10 @@ int main()
 			break;
 		case 2:
 			input = 0;
-			printf("ÍË³öÓÎÏ·\n");
+			printf("é€€å‡ºæ¸¸æˆ\n");
 			break;
 		default:
-			printf("ÊäÈë´íÎó");
+			printf("è¾“å…¥é”™è¯¯");
 			Sleep(1000);
 			system("cls");
 			break;
