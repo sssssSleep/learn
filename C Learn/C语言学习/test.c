@@ -1,5 +1,24 @@
 //#define _CRT_SECURE_NO_WARNINGS
 //#include<stdio.h>
+//int main()
+//{
+//	int i;
+//	int p[3] = { 1,0,8 };
+//if ((p[0] != 0) && (p[1] != 0) && (p[2] != 0))
+//{
+//	if (p[0] == p[1] || p[0] == p[2] || p[1] == p[2])
+//	{
+//		i = 0;
+//	}
+//	else
+//		i = 1;
+//}
+//else
+//{
+//	i = 0;
+//}
+//printf("%d ", i);
+//}
 //int* myfunc(int* p, int x)
 //{
 //    int count_0 = 0;

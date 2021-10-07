@@ -1,59 +1,146 @@
-﻿#define _CRT_SECURE_NO_WARNINGS
-#include <stdio.h>
-long judge1(long num2)
-{
-	long num1 = reverse(num2);
-	if (num1 == num2)
-		return 0;
-	else
-		return 1;
-}
-long reverse(long number)
-{
-	long tmp = 0;
-	while (number != 0)
-	{
-		tmp = (tmp * 10 + number % 10);
-		number = number / 10;
-	}
-	if (number < 0)
-		return (-tmp);
-	else
-		return tmp;
-}
-void judge(long x, long* step)
-{
-	int count = 0;
-	int j = 0;
-	j = judge1(x);
-	if (j == 0)
-		return 0;
-	else
-	{
-		long sum = x;
-		do
-		{
-			sum = sum + reverse(sum);
-			count++;
-		} while (judge1(sum));
-	}
-	*step = count;
-}
-int main()
-{
-	long judge1(long num2);
-	long reverse(long number);
-	void judge(long x, long* step);
-	long num;
-	int step = 0;
-	printf("please enter a number:> ");
-	scanf("%d", &num);
-	judge(num, &step);
-	if (step <= 30)
-		printf("STEP = %d\n", step);
-	else
-		printf("Impossible");
-}
+﻿//#define _CRT_SECURE_NO_WARNINGS
+//#include <stdio.h>
+////SELF函数用于判断一个数字是否有零或者重复的数字
+//int SELF(int* p)
+//{
+//	if ((p[0]!= 0) && (p[1] != 0) && (p[2] != 0))
+//	{
+//		if (p[0] == p[1] || p[0] == p[2] || p[1] == p[2])
+//		{
+//			return 0;
+//		}
+//		else
+//			return 1;
+//	}
+//	else
+//	{
+//		return 0;
+//	}
+//}
+////SEARCH函数用于判断两个数字之间是否有相同的数字
+//int SEARCH(int* num1, int* num2, int x)
+//{
+//	for(int i = 0;i <x; i++)
+//	{
+//		int search = num1[i];
+//		for (int n = 0;n < x;n++)
+//			{
+//				if (search == num2[n])
+//				{
+//					return 0;
+//				}
+//			}
+//	}
+//	return 1;
+//}
+////TNUM函数用于提取输入数字的个十百并放入到数组中
+//void TNUM(int x , int* p)
+//{
+//	int bit, ten, hun;
+//	bit = x % 10;
+//	ten = (x / 10) % 10;
+//	hun = x / 100;
+//	p[0] = bit;
+//	p[1] = ten;
+//	p[2] = hun;
+//}
+////JUDGE函数用于判断是否符合题目要求
+//int JUDGE(int x, int y, int z)
+//{
+//	int num1[3], num2[3], num3[3];
+//	TNUM(x, num1);
+//	TNUM(y, num2);
+//	TNUM(z, num3);
+//	if (SELF(num1) && SELF(num2) && SELF(num3))
+//	{
+//		if (SEARCH(num1, num2, 3) == 1)
+//		{
+//			if (SEARCH(num1, num3, 3) == 1)
+//			{
+//				if (SEARCH(num2, num3, 3) == 1)
+//				{
+//					return 1;
+//				}
+//			}
+//		}
+//	}
+//	return 0;
+//}
+//
+//int main()
+//{
+//	int j = 0;
+//	for (int i = 123; i * 3 < 1000; i++)
+//	{
+//		if (j = JUDGE(i, i * 2, i * 3))
+//		{
+//			printf("%d %d %d\n", i, i * 2, i * 3);
+//		}
+//	}
+//	return 0;
+//}
+// 
+// 
+//int main()
+//{
+//
+//
+//	return 0;
+//}
+//long judge1(long num2)
+//{
+//	long num1 = reverse(num2);
+//	if (num1 == num2)
+//		return 0;
+//	else
+//		return 1;
+//}
+//long reverse(long number)
+//{
+//	long tmp = 0;
+//	while (number != 0)
+//	{
+//		tmp = (tmp * 10 + number % 10);
+//		number = number / 10;
+//	}
+//	if (number < 0)
+//		return (-tmp);
+//	else
+//		return tmp;
+//}
+//void judge(long x, long* step)
+//{
+//	int count = 0;
+//	int j = 0;
+//	j = judge1(x);
+//	if (j == 0)
+//		return 0;
+//	else
+//	{
+//		long sum = x;
+//		do
+//		{
+//			sum = sum + reverse(sum);
+//			count++;
+//		} while (judge1(sum));
+//	}
+//	*step = count;
+//}
+//int main()
+//{
+//	long judge1(long num2);
+//	long reverse(long number);
+//	void judge(long x, long* step);
+//	long num;
+//	int step = 0;
+//	printf("please enter a number:> ");
+//	scanf("%d", &num);
+//	judge(num, &step);
+//	if (step <= 30)
+//		printf("STEP = %d\n", step);
+//	else
+//		printf("Impossible");
+//}
 //void fun(int x , int* pp ,int* n )
 //{
 //	int count = 0;
