@@ -1,5 +1,55 @@
+//#include<stdio.h>
+//#include<math.h>
+//int main() {
+//    int i;
+//    int hun, ten, bit;
+//    for (i = 100; i <= 999; i++) {
+//        
+//        hun = (i / 100);
+//        hun = (double)hun;
+//        ten = ((i / 10) % 10);
+//        ten = (double)ten;
+//        bit = (i % 10);
+//        bit = (double)bit;
+//        i = (double)i;
+//        if ((pow(hun,3)+ pow(ten, 3)+ pow(bit, 3)) == i)
+//        {
+//            printf("%d ", i);
+//        }
+//    }
+//    return 0;
+//}
 //#define _CRT_SECURE_NO_WARNINGS
 //#include<stdio.h>
+//int main() {
+//    char a;
+//    int b = 0;
+//    int j = 0;
+//    int k = 0;
+//    int t = 0;
+//
+//    while ((a = getchar()) != '\n') 
+//    {
+//
+//        if ('a' <= a && 'z' >= a || 'A' <= a && 'Z' >= a) {
+//            b++;
+//        }
+//        else if ('1' <= a && '9' >= a) {
+//            j++;
+//        }
+//        else if (a == ' ') {
+//            k++;
+//        }
+//        else {
+//            t++;
+//        }
+//
+//    }
+//    printf("英文字母个数为：%d\n数字个数为：%d\n空格个数为：%d\n其他字符为：%d\n", b, j, k, t);
+//
+//
+//    return 0;
+//}
 //int main()
 //{
 //	int i;

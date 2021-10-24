@@ -1,5 +1,110 @@
-﻿//#define _CRT_SECURE_NO_WARNINGS
-//#include <stdio.h>
+﻿#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+int ChangeNUM(int* p)
+{
+	int temp, i, j, n, count;
+	int arr[10] = { 1,2,3,4,5,6,7,8,9,0 };
+	temp = 0;
+	count = 0;
+	for (n = 0; n < 8; n++)
+	{
+		if (p[n] < 10)
+			count++;
+	}
+	for (i = 0; i < count; i++)
+	{
+		for (j = 0; j < 10; j++)
+		{
+			if (p[i] == arr[j])
+			{
+				temp = temp * 10 + j + 1;
+			}
+		}
+	}
+	return temp;
+}
+void TNUM(int num, int n, int* p)
+{
+	int temp = 0;
+	n = n - 1;
+	while (n >= 0)
+	{
+		p[n] = num % 10;
+		num = num / 10;
+		n--;
+	}
+}
+int SUM(int num1, int num2)
+{
+	int temp = 0;
+	int n = 0;
+	temp = num1 + num2;
+	//	for(n=0;1;n++)
+	//	{
+	//		if(temp%10 = 0)
+	//	}
+	return temp;
+}
+
+
+int main()
+{
+	int p1[8] = { 1,2,3,11,10,10,10,10 };
+	int p2[8] = { 1,2,3,15,10,10,10,10 };
+	int p[8] = { 10,10,10,10,10,10,10,10 };
+	TNUM(SUM(ChangeNUM(p1), ChangeNUM(p2)),3,p);
+	for(int i = 0 ; i <3;i++)
+		printf("%d", p[i]);
+
+	return 0;
+}
+//int main()
+//{
+//	int a = 0;
+//	/*char ch1 = 'K';
+//	char ch2 = 'K';
+//	char ch3 = 70;
+//	printf("%d%d%d\n", sizeof(++ch1), sizeof(++ch2), sizeof(++ch3));
+//	printf("%c%c%c\n", ch1, ch2, ch3);*/
+//	scanf("%d",&a);
+//	printf("%d", a);
+//	return 0;
+//}
+////int main()
+//{
+//	int arr[5][5] = { 0 };
+//	for (int i = 0; i <5; i++)
+//	{
+//		arr[i][i] = 1 ;
+//	}
+//	for (int i = 0, j = 4; i < 5; i++,j--)
+//	{
+//		arr[i][j] = 1;
+//	}
+//
+//	for (int i = 0; i < 5; i++)
+//	{
+//		for (int j = 0; j < 5; j++)
+//		{
+//			printf("%d ", arr[i][j]);
+//		}
+//		printf("\n");
+//	}
+//	return 0;
+//}//
+//void fun(int x)
+//{
+//	if (x > 0)
+//		fun(x / 2);
+//	printf("%d\n", x);
+//}
+//int main()
+//{
+//	fun(10);
+//
+//	return 0;
+//}
+
 ////SELF函数用于判断一个数字是否有零或者重复的数字
 //int SELF(int* p)
 //{
@@ -80,13 +185,13 @@
 //	return 0;
 //}
 // 
-// 
+//// 
 //int main()
 //{
 //
 //
 //	return 0;
-//}
+////}
 //long judge1(long num2)
 //{
 //	long num1 = reverse(num2);
@@ -156,82 +261,82 @@
 //
 //
 //}
-//int main()
-//{
-//	int n = 0;
-//	int i = 0;
-//	int pp[100];
-//
-//	void fun(int x, int* pp, int* n);
-//	printf("请输入需查询偶数因子的数:> ");
-//	scanf("%d", &i);
-//	fun(i,pp,&n);
-//	printf("%d的偶数因子有:>",i);
-//	for (i = 0; i < n; i++)
-//	{
-//		printf("%d ", pp[i]);
-//	}
-//	printf("\n一共%d个", n);
-//	return 0;
-//}
-//#define _CRT_SECURE_NO_WARNINGS
-//#include<stdio.h>
-//int main()
-//{
-//	int i = 1;
-//	if (i % 2 == 0)
-//	{
-//		printf("%dSHIGOUSHU", i);
-//
-//	}
-//	else
-//	{
-//		printf("%d", i);
-//
-//	}
-//	return 0;
-//}
-//int FACTORIAL(int x)
-//{
-//	if (x <= 0)
-//		return 0;
-//	else if (x > 0 && x <= 12)
-//	{
-//		int i = 1;
-//		int sum = 1;
-//		for (i = 1; i <= x; i++)
-//		{
-//			sum = sum * i;
-//		}
-//		printf("%d!=%d\n", x, sum);
-//		return 1;
-//	}
-//	else
-//		return 2;
-//}
-//
-//int main()
-//{
-//	int x = 0;
-//	int p = 0;
-//	printf("请输入一个数字:>");
-//	scanf("%d", &x);
-//	p = FACTORIAL(x);
-//	printf("返回值为%d", p);
-//	return 0;
-//}
-//void PRINTNUM(int i)
-//{
-//	for (int a = 1 ; a <= i; a++)
-//	{
-//		printf("%-2d ", a);
-//	}
-//}
-//int main()
-//{
-//	int x = 0;
-//	printf("请输入截止数:>");
-//L1:
+////int main()
+////{
+////	int n = 0;
+////	int i = 0;
+////	int pp[100];
+////
+////	void fun(int x, int* pp, int* n);
+////	printf("请输入需查询偶数因子的数:> ");
+////	scanf("%d", &i);
+////	fun(i,pp,&n);
+////	printf("%d的偶数因子有:>",i);
+////	for (i = 0; i < n; i++)
+////	{
+////		printf("%d ", pp[i]);
+////	}
+////	printf("\n一共%d个", n);
+////	return 0;
+////}
+////#define _CRT_SECURE_NO_WARNINGS
+////#include<stdio.h>
+////int main()
+////{
+////	int i = 1;
+////	if (i % 2 == 0)
+////	{
+////		printf("%dSHIGOUSHU", i);
+////
+////	}
+////	else
+////	{
+////		printf("%d", i);
+////
+////	}
+////	return 0;
+////}
+////int FACTORIAL(int x)
+////{
+////	if (x <= 0)
+////		return 0;
+////	else if (x > 0 && x <= 12)
+////	{
+////		int i = 1;
+////		int sum = 1;
+////		for (i = 1; i <= x; i++)
+////		{
+////			sum = sum * i;
+////		}
+////		printf("%d!=%d\n", x, sum);
+////		return 1;
+////	}
+////	else
+////		return 2;
+////}
+////
+////int main()
+////{
+////	int x = 0;
+////	int p = 0;
+////	printf("请输入一个数字:>");
+////	scanf("%d", &x);
+////	p = FACTORIAL(x);
+////	printf("返回值为%d", p);
+////	return 0;
+////}
+////void PRINTNUM(int i)
+////{
+////	for (int a = 1 ; a <= i; a++)
+////	{
+////		printf("%-2d ", a);
+////	}
+////}
+////int main()
+////{
+////	int x = 0;
+////	printf("请输入截止数:>");
+////L1:
 //	scanf("%d", &x);
 //	if (x > 0)
 //	{

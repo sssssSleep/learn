@@ -139,7 +139,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\..\国庆大礼包之C2 21 物院电三 梁辉强.c" />
     <ClCompile Include="C语言打印HelloWorld.c" />
     <ClCompile Include="test.c" />
   </ItemGroup>
