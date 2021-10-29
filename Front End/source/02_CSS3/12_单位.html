@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1{
+            /* 
+                长度单位
+                    像素
+                        -屏幕(显示器)实际上是由一个个的小点点构成的
+                        -不同屏幕的像素大学是不同的,像素越小的屏幕显示的效果月清晰
+                        -所以同样的200px在不同的设备下显示效果不一样
+                    em
+                        -相对于元素的字体大小来计算的
+                        -1em = 1font-size
+                        -em会根据字体大小而改变
+                    rem
+                        -rem是相对于元素的字体大小来计算的
+            */
+            width:300px;
+            height: 100px;
+            background-color: rgb(11, 223, 92);
+        }
+        .box2{
+            width: 50%;
+            height: 50%;
+            background-color: rgba(17, 0, 255, 0.5);
+        }
+        .box3{
+                font-size: 16px;
+                width: 10em;
+                height: 10em;
+                background-color: gold;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">
+        <div class="box2"></div>
+    </div>
+<div class="box3"></div>
+</body>
+</html>

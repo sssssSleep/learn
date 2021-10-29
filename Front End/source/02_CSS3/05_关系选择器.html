@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        父元素
+            - 直接包含子元素的元素叫做父元素
+        子元素
+            -被父元素包含的元素是子元素
+        祖先元素
+            - 直接或简介包含后代元素的元素叫做祖先元素
+            -一个元素的父元素也是他的祖先元素
+     -->
+    <!-- 
+        > 子元素
+        空格 后代
+        +紧挨着的
+        ~后面所有的兄弟元素
+        
+
+     -->
+    <div>
+        我是一个div
+        <p>
+            我是div内的p元素
+                <span>
+                    我是p元素中的span
+                </span>
+                我是div内的p元素
+        </p>
+        <span>我是div内的span元素</span>
+
+    </div>
+
+
+</body>
+</html>

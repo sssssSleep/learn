@@ -1,63 +1,104 @@
 ﻿#define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
-int ChangeNUM(int* p)
+#include <stdio.h>
+
+int main()
 {
-	int temp, i, j, n, count;
-	int arr[10] = { 1,2,3,4,5,6,7,8,9,0 };
-	temp = 0;
-	count = 0;
-	for (n = 0; n < 8; n++)
-	{
-		if (p[n] < 10)
-			count++;
-	}
-	for (i = 0; i < count; i++)
-	{
-		for (j = 0; j < 10; j++)
-		{
-			if (p[i] == arr[j])
-			{
-				temp = temp * 10 + j + 1;
-			}
-		}
-	}
-	return temp;
+	char c1,c2;
+	scanf_s("%c %c",&c1, &c2);
+	printf("%c %c", c1,c2);
+	return 0;
 }
-void TNUM(int num, int n, int* p)
-{
-	int temp = 0;
-	n = n - 1;
-	while (n >= 0)
-	{
-		p[n] = num % 10;
-		num = num / 10;
-		n--;
-	}
-}
-int SUM(int num1, int num2)
-{
-	int temp = 0;
-	int n = 0;
-	temp = num1 + num2;
+//# include <stdio.h>
+//int main(void)
+//{
+//	//int a[5] = { 2, 5, 3, 4, 7 };
+//	  int a[7] = {21, 43, 9, 3, 2,100};
+//	int i, j;
+//	int t;
+//
+//	//排序
+//	for (i = 0; i < 5; ++i)
+//	{
+//		for (j = 0; j <= 4 - i; ++j)
+//		{
+//			if (a[j] > a[j + 1])
+//			{
+//				t = a[j];
+//				a[j] = a[j + 1];
+//				a[j + 1] = t;
+//			}
+//		}
+//	}
+//
+//
+//	for (i = 0; i < 6; ++i)
+//		printf("%d ", a[i]);
+//	printf("\n");
+//
+//	return 0;
+//}
+//输出结果为：2 3 4 5 7
+
+//如果把a[5]改成a[6],输出结果为：2 0 3 4 5
+//int ChangeNUM(int* p)
+//{
+//	int temp, i, j, n, count;
+//	int arr[10] = { 1,2,3,4,5,6,7,8,9,0 };
+//	temp = 0;
+//	count = 0;
+//	for (n = 0; n < 8; n++)
+//	{
+//		if (p[n] < 10)
+//			count++;
+//	}
+//	for (i = 0; i < count; i++)
+//	{
+//		for (j = 0; j < 10; j++)
+//		{
+//			if (p[i] == arr[j])
+//			{
+//				temp = temp * 10 + j + 1;
+//			}
+//		}
+//	}
+//	return temp;
+//}
+//void TNUM(int num, int n, int* p)
+//{
+//	int temp = 0;
+//	n = n - 1;
+//	while (n >= 0)
+//	{
+//		p[n] = num % 10;
+//		num = num / 10;
+//		n--;
+//	}
+//}
+//int SUM(int num1, int num2)
+//{
+//	int temp = 0;
+//	int n = 0;
+//	temp = num1 + num2;
 	//	for(n=0;1;n++)
 	//	{
 	//		if(temp%10 = 0)
 	//	}
-	return temp;
-}
-
-
-int main()
-{
-	int p1[8] = { 1,2,3,11,10,10,10,10 };
-	int p2[8] = { 1,2,3,15,10,10,10,10 };
-	int p[8] = { 10,10,10,10,10,10,10,10 };
-	TNUM(SUM(ChangeNUM(p1), ChangeNUM(p2)),3,p);
-	for(int i = 0 ; i <3;i++)
-		printf("%d", p[i]);
-
-	return 0;
-}
+//	return temp;
+//}
+//
+//
+//int main()
+//{
+//	int p1[8] = { 1,2,3,11,10,10,10,10 };
+//	int p2[8] = { 1,2,3,15,10,10,10,10 };
+//	int p[8] = { 10,10,10,10,10,10,10,10 };
+//	TNUM(SUM(ChangeNUM(p1), ChangeNUM(p2)),3,p);
+//	for(int i = 0 ; i <3;i++)
+//		printf("%d", p[i]);
+//
+//	return 0;
+//}
 //int main()
 //{
 //	int a = 0;

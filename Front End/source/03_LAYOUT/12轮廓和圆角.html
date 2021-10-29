@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1{
+            width: 200px;
+            height: 200px;
+            background-color:#bfe;
+            /* outline: 10px red solid; */
+                /*轮廓(outline)不会影响可见框大小*/
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, .5);
+            /*box-shadow 第一个值  水平偏移量 第二个值 垂直偏移量 第三个值 阴影的模糊半径 第四个为阴影颜色*/
+        }
+        .box1:hover{
+            outline: solid 10px red;
+
+        }
+        /* .box1:hover{
+            border: red solid 10px;
+        } */
+        .box2{
+            margin-top: 50px;
+            width: 200px;
+            height: 200px;
+            background-color: #bfe;
+            /* border-top-left-radius: 100px; */
+            border-radius: 30px 180px;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, .5);
+            /* border-radius 可以分别指定4个角的值 左上 顺时针
+                             3个值 左上 右上/左下 右下 
+                             2个值 左上/右下  右上/左下
+            */
+                             
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <p>hello</p>
+</body>
+</html>
